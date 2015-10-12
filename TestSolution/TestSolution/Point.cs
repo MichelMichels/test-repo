@@ -26,6 +26,15 @@ namespace TestSolution
             return new Point(x, y);
         }
 
+        public bool isCloserTo(Point p, Point end)
+        {
+            double lengthPoint1ToEnd = Math.Sqrt(Math.Pow(end.y - y, 2) + Math.Pow(end.x - x, 2));
+            double lengthPoint2ToEnd = Math.Sqrt(Math.Pow(end.y - p.y, 2) + Math.Pow(end.x - p.x, 2));
+
+            // returns true if l1 smaller than or equal to l2
+            return (lengthPoint1ToEnd <= lengthPoint2ToEnd);
+        }
+
         public int x { get; set; }
         public int y { get; set; }
     }
