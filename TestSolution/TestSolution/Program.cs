@@ -13,10 +13,26 @@ namespace TestSolution
             Point beginPoint = new Point(0, 0);
             Point endPoint = new Point(10, 0);
 
-            Point random = new Point(5, 0);
+            Logica l = new Logica(beginPoint, endPoint);
 
-            // should be true
-            Console.WriteLine(random.isCloserTo(beginPoint, endPoint));
+            int succesCounter = 0;
+            List<int> steps = new List<int>();
+
+            for (int i = 0; i < 20; i++)
+            {
+                if (l.start())
+                {
+                    succesCounter++;
+                    
+                } 
+            }
+
+            Console.WriteLine("{0} wins!", succesCounter);
+            foreach (var step in l.Steps)
+            {
+                Console.WriteLine("Steps: {0}", step);
+            }
+
             Console.ReadLine();
         }
     }
