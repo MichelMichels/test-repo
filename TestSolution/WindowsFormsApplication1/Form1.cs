@@ -17,15 +17,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        public void Form1_MouseMove(object sender, MouseEventArgs e)
+        private void Panel1_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             labelXCoordinate.Text = $"{e.X}";
             labelYCoordinate.Text = $"{e.Y}";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
